@@ -1,0 +1,76 @@
+{
+  "contract_fingerprint": "c7ca5e5ebb4c092910ec72b371e188303358c5e34d2908c0a88f782a241162cf",
+  "sdk_targets_version": "1.1.0",
+  "targets": [
+    {
+      "identity": {
+        "coordinates": "jackai_platform_os_hub_api_public_subset_sdk@1.0.0",
+        "ecosystem": "crates.io",
+        "entry": "",
+        "import": "use jackai_platform_os_hub_api_public_subset_sdk as sdk;"
+      },
+      "operations": {
+        "failUsageQuota": {
+          "member": "kernel().fail_usage_quota",
+          "method": "POST",
+          "path": "/v1/kernel/usage/fail",
+          "resource": "kernel()",
+          "signature": "pub async fn fail_usage_quota(&self, request_options: Option<RequestOptions>) -> Result<(), ApiError>"
+        },
+        "finalizeUsageQuota": {
+          "member": "kernel().finalize_usage_quota",
+          "method": "POST",
+          "path": "/v1/kernel/usage/finalize",
+          "resource": "kernel()",
+          "signature": "pub async fn finalize_usage_quota(&self, request_options: Option<RequestOptions>) -> Result<(), ApiError>"
+        },
+        "getCurrentUser": {
+          "member": "user().get_current",
+          "method": "GET",
+          "path": "/user/me",
+          "resource": "user()",
+          "signature": "pub async fn get_current(&self, request_options: Option<RequestOptions>) -> Result<(), ApiError>"
+        },
+        "getHealth": {
+          "member": "health().get",
+          "method": "GET",
+          "path": "/health",
+          "resource": "health()",
+          "signature": "pub async fn get(&self, request_options: Option<RequestOptions>) -> Result<(), ApiError>"
+        },
+        "getSignupPolicy": {
+          "member": "user().get_signup_policy",
+          "method": "GET",
+          "path": "/user/auth/signup-policy",
+          "resource": "user()",
+          "signature": "pub async fn get_signup_policy(&self, request_options: Option<RequestOptions>) -> Result<(), ApiError>"
+        },
+        "loginUser": {
+          "member": "user().login",
+          "method": "POST",
+          "path": "/user/auth/login",
+          "resource": "user()",
+          "signature": "pub async fn login(&self, request_options: Option<RequestOptions>) -> Result<(), ApiError>"
+        },
+        "reserveUsageQuota": {
+          "member": "kernel().reserve_usage_quota",
+          "method": "POST",
+          "path": "/v1/kernel/usage/reserve",
+          "resource": "kernel()",
+          "signature": "pub async fn reserve_usage_quota(&self, request_options: Option<RequestOptions>) -> Result<(), ApiError>"
+        },
+        "submitWaitlistRequest": {
+          "member": "user().submit_waitlist_request",
+          "method": "POST",
+          "path": "/user/auth/waitlist",
+          "resource": "user()",
+          "signature": "pub async fn submit_waitlist_request(&self, request_options: Option<RequestOptions>) -> Result<(), ApiError>"
+        }
+      },
+      "package_directory": "../jackai_platform_os_hub_api_public_subset_sdk",
+      "package_manifest": "Cargo.toml",
+      "reference": "api.md",
+      "renderer": "rust"
+    }
+  ]
+}

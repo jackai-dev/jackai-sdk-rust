@@ -1,0 +1,24 @@
+[package]
+name = "jackai_platform_os_hub_api_public_subset_sdk"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.86"
+description = "OpenAPI 3.1.0 description of the JackAI Platform OS Hub API operations these SDKs wrap (api.jackaisaas.com): liveness, waitlist-gated registration, sign-in, the current user, and reserve/finalize/fail usage metering. Only routes the Hub serves are listed."
+license-file = "LICENSE"
+
+include = ["src/**", "Cargo.toml", "Cargo.lock", "README.md", "api.md", "LICENSE", "omniwrap-artifact.json", "agent-session.json", "AGENT_SESSION.md"]
+
+[package.metadata.omniwrap]
+schema = "https://omniwrap.dev/schemas/rust-package/v2"
+source_version_present = true
+source_version_utf8_hex = "312e302e30"
+
+[dependencies]
+base64 = "0.22.1"
+futures-core = "0.3.32"
+reqwest = { version = "0.12.28", default-features = false, features = ["json", "multipart", "rustls-tls"] }
+ring = "0.17.14"
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = { version = "1.0.150", features = ["float_roundtrip"] }
+tokio = { version = "1.52.3", features = ["macros", "rt-multi-thread", "time"] }
+urlencoding = "2.1.3"
